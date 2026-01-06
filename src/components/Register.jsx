@@ -32,7 +32,7 @@ const Register = () => {
 
       // If the request is successful, set a success message.
       console.log('Registration successful:', response.data);
-      navigate('/')
+      navigate('/login')
       toast.success('Registration successful!')
       setStatusMessage('Registration successful! You can now log in.');
 
