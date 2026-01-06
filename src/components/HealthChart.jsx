@@ -2,7 +2,7 @@ import axios from 'axios';
 import { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const HealthBarChart = () => {
+const HealthBarChart = ({count}) => {
   const [records, setRecords] = useState([]);
   const [loading, setLoading] = useState(true);
 
@@ -16,6 +16,8 @@ const HealthBarChart = () => {
       setLoading(false);
     }
   };
+
+  console.log(count);
 
   useEffect(() => {
     fetchRecords();

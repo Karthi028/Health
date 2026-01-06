@@ -4,7 +4,7 @@ import { toast } from "react-toastify";
 
 const RECORD_API = "/api/health/records";
 
-const HealthRecord = ({ onRecordAdded }) => {
+const HealthRecord = ({ setcount,count}) => {
     const [formData, setFormData] = useState({
         systolic: "",
         diastolic: "",
@@ -28,7 +28,7 @@ const HealthRecord = ({ onRecordAdded }) => {
             await axios.post(RECORD_API, payload, { withCredentials: true });
             toast.success("Record saved successfully!");
             setFormData({ systolic: "", diastolic: "", sugarLevel: "", pulse: "" });
-            if (onRecordAdded) onRecordAdded(); // Refresh the chart
+            if (setcount) setcount(count+1); // Refresh the chart
         } catch (error) {
             toast.error(error.response?.data?.message || "Failed to save record");
         }
