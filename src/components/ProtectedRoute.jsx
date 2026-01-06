@@ -13,8 +13,8 @@ const ProtectedRoute = ({ children }) => {
         await axios.get("https://healthcheck-nqw1.onrender.com/api/v1/auth/me", { withCredentials: true });
         setIsAuthenticated(true);
       } catch (err) {
-        setIsAuthenticated(false);
-      }
+        setIsAuthenticated(false);  
+      } 
     };
     checkAuth();
   }, []);
