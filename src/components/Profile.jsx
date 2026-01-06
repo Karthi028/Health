@@ -32,7 +32,7 @@ const Profile = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             <Navbar />
-            <div className="max-w-3xl mx-auto mt-10 p-6">
+            <div className="max-w-3xl mx-auto mt-5 p-6">
                 <div className="bg-white rounded-2xl shadow-xl overflow-hidden border border-gray-100">
                     {/* Profile Header Background */}
                     <div className="h-32 from-cyan-500 to-blue-600"></div>
