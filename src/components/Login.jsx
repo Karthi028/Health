@@ -29,6 +29,7 @@ const Login = () => {
       setIsLoggedIn(true);
 
     } catch (error) {
+      toast.error('Invalid Credentials')
       console.error('Login failed:', error.response ? error.response.data : error.message);
       setStatusMessage(`Login failed: ${error.response ? error.response.data.message : error.message}`);
     }
