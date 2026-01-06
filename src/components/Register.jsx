@@ -26,7 +26,9 @@ const Register = () => {
         name,
         age: Number(age),
         gender
-      });
+      },
+        { withCredentials: true }
+      );
 
       // If the request is successful, set a success message.
       console.log('Registration successful:', response.data);
