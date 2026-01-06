@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { useEffect, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const HealthBarChart = ({ count }) => {
