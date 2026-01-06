@@ -10,7 +10,7 @@ const Profile = () => {
     useEffect(() => {
         const fetchProfile = async () => {
             try {
-                const response = await axios.get("http://localhost:3001/api/v1/auth/me", {
+                const response = await axios.get("https://healthcheck-nqw1.onrender.com/api/v1/auth/me", {
                     withCredentials: true,
                 });
                 // Accessing .User because of your controller: res.json({ User: user })

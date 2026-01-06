@@ -2,7 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const RECORD_API = "http://localhost:3001/api/v1/health/records";
+const RECORD_API = "https://healthcheck-nqw1.onrender.com/api/v1/health/records";
 
 const HealthRecord = ({ onRecordAdded }) => {
     const [formData, setFormData] = useState({

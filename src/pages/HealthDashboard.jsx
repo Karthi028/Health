@@ -10,7 +10,7 @@ const HealthDashboard = () => {
   useEffect(() => {
     const fetchRecords = async () => {
       try {
-        const res = await axios.get("http://localhost:3001/api/v1/health/records", { withCredentials: true });
+        const res = await axios.get("https://healthcheck-nqw1.onrender.com/api/v1/health/records", { withCredentials: true });
         const data = Array.isArray(res.data) ? res.data : res.data.records || [];
         // Sort by date so bars appear in chronological order
         setRecords(data.sort((a, b) => new Date(a.recordedAt) - new Date(b.recordedAt)));

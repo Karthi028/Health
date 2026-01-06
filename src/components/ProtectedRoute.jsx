@@ -10,7 +10,7 @@ const ProtectedRoute = ({ children }) => {
     const checkAuth = async () => {
       try {
         // Hit your 'me' endpoint to see if the cookie is valid
-        await axios.get("http://localhost:3001/api/v1/auth/me", { withCredentials: true });
+        await axios.get("https://healthcheck-nqw1.onrender.com/api/v1/auth/me", { withCredentials: true });
         setIsAuthenticated(true);
       } catch (err) {
         setIsAuthenticated(false);

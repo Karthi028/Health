@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router"
 import { toast } from "react-toastify";
 
-const API_ENDPOINT = "http://localhost:3001/api/v1/auth/register";
+const API_ENDPOINT = "https://healthcheck-nqw1.onrender.com/api/v1/auth/register";
 
 const Register = () => {
   // State variables to store form input data and the submission status.
