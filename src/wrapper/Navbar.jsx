@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router";
 import { toast } from "react-toastify";
 // import { User, LogOut } from "lucide-react"; // Optional: for icons
 
-const NAVBAR_API = "https://healthcheck-nqw1.onrender.com/api/v1/auth/logout";
+const NAVBAR_API = "/api/auth/logout";
 
 const Navbar = () => {
   const navigate = useNavigate();

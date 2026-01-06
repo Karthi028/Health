@@ -1,1 +1,3 @@
 /* /index.html 200
+
+/api/* https://healthcheck-nqw1.onrender.com/api/v1/:splat  200

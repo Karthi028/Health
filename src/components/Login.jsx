@@ -3,7 +3,7 @@ import { useState } from "react";
 import { Link, useNavigate } from "react-router"
 import { toast } from "react-toastify";
 
-const API_ENDPOINT_LOGIN = "https://healthcheck-nqw1.onrender.com/api/v1/auth/login";
+const API_ENDPOINT_LOGIN = "/api/auth/login";
 
 const Login = () => {
   const [email, setEmail] = useState('');
