@@ -4,11 +4,14 @@ import Login from "./components/Login"
 import Register from "./components/Register"
 import Profile from "./components/Profile"
 import HealthDashboard from "./pages/HealthDashboard"
+import ProtectedRoute from "./components/ProtectedRoute"
 
 const routes = [
   {
     path: '/',
-    element:<Home />
+    element: <ProtectedRoute>
+      <Home />
+    </ProtectedRoute>
   },
   {
     path: '/login',
@@ -20,11 +23,11 @@ const routes = [
   },
   {
     path: '/profile',
-    element: <Profile />
+    element: <ProtectedRoute><Profile /></ProtectedRoute>
   },
   {
     path: '/HealthDashboard',
-    element: <HealthDashboard />
+    element: <ProtectedRoute><HealthDashboard /></ProtectedRoute>
   },
 
 
