@@ -8,7 +8,7 @@ const HealthBarChart = () => {
 
   const fetchRecords = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/api/v1/health/records", { withCredentials: true });
+      const res = await axios.get("https://healthcheck-nqw1.onrender.com/api/v1/health/records", { withCredentials: true });
       setRecords(Array.isArray(res.data) ? res.data : res.data.records || []);
     } catch (err) {
       console.error("Error fetching records:", err);
