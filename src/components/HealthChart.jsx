@@ -20,15 +20,17 @@ const HealthBarChart = ({ count }) => {
 
   useEffect(() => {
     fetchRecords();
-  }, []);
+  }, [count]);
 
-  const chartData = records.map(record => ({
-    date: new Date(record.recordedAt).toLocaleDateString(),
-    systolic: record.bloodPressure?.systolic || 0,
-    diastolic: record.bloodPressure?.diastolic || 0,
-    sugar: record.sugarLevel,
-    pulse: record.pulse
-  }));
+  const chartData = useMemo(() => {
+    return records.map(record => ({
+      date: new Date(record.recordedAt).toLocaleDateString(),
+      systolic: record.bloodPressure?.systolic || 0,
+      diastolic: record.bloodPressure?.diastolic || 0,
+      sugar: record.sugarLevel,
+      pulse: record.pulse
+    }));
+  }, [records]);
 
   if (loading) return <p className="text-center mt-8 text-cyan-600 font-medium">Loading Health Data...</p>;
   if (records.length === 0) return <p className="text-center mt-8 text-gray-500">No records found to display.</p>;
@@ -54,7 +56,6 @@ const HealthBarChart = ({ count }) => {
           <Bar dataKey="pulse" fill="#8b5cf6" name="Pulse" radius={[4, 4, 0, 0]} />
         </BarChart>
       </ResponsiveContainer>
-      <p className="hidden">{count}</p>
     </div>
   );
 };
