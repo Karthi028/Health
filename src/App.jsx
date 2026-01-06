@@ -9,9 +9,9 @@ import ProtectedRoute from "./components/ProtectedRoute"
 const routes = [
   {
     path: '/',
-    element:
+    element: <ProtectedRoute>
       <Home />
-
+    </ProtectedRoute>
   },
   {
     path: '/login',
